@@ -53,28 +53,6 @@
             font-size: 0.9rem;
             margin-bottom: 0.5rem;
         }
-        .portfolio-item {
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-            background: #fff;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-        .portfolio-item:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-        }
-        .portfolio-caption {
-            padding: 1.5rem;
-            text-align: center;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
         .btn-warning-custom {
             background-color: #ffc107;
             color: #000;
@@ -86,10 +64,6 @@
         .btn-warning-custom:hover {
             background-color: #e0a800;
             color: #000;
-        }
-        .modal-content {
-            border-radius: 15px;
-            border: none;
         }
     </style>
 </head>
@@ -127,7 +101,7 @@
         </div>
     </header>
 
-       <!-- Minicatálogos Section -->
+    <!-- Minicatálogos Section -->
     <section class="py-5 bg-light" id="portfolio">
         <div class="container py-4">
             <div class="text-center mb-5">
@@ -139,7 +113,7 @@
                 <!-- Tarjeta 1: Pastelería Premium y Antojos -->
                 <div class="col-lg-4 col-md-6">
                     <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden text-center" style="background-color: #2b1d19;">
-                        <img src="assets/img/cat-premium.jpg" class="card-img-top w-100" alt="Pastelería Premium y Antojos" style="height: 500px; object-fit: contain;">
+                        <img src="assets/img/cat-premium.jpg" class="card-img-top w-100" alt="Pastelería Premium y Antojos" style="height: 400px; object-fit: cover;">
                         <div class="card-body d-flex align-items-center justify-content-center p-3">
                             <a href="premium.html" class="btn btn-outline-light rounded-pill px-4 fw-bold text-uppercase">Ver Catálogo Completo</a>
                         </div>
@@ -149,7 +123,7 @@
                 <!-- Tarjeta 2: Línea Keto & Viandas -->
                 <div class="col-lg-4 col-md-6">
                     <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden text-center" style="background-color: #2b1d19;">
-                        <img src="assets/img/cat-keto.jpg" class="card-img-top w-100" alt="Línea Keto & Viandas" style="height: 500px; object-fit: contain;">
+                        <img src="assets/img/cat-keto.jpg" class="card-img-top w-100" alt="Línea Keto & Viandas" style="height: 400px; object-fit: cover;">
                         <div class="card-body d-flex align-items-center justify-content-center p-3">
                             <a href="keto.html" class="btn btn-outline-light rounded-pill px-4 fw-bold text-uppercase">Ver Catálogo Completo</a>
                         </div>
@@ -159,7 +133,7 @@
                 <!-- Tarjeta 3: Cumples Infantiles -->
                 <div class="col-lg-4 col-md-6">
                     <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden text-center" style="background-color: #2b1d19;">
-                        <img src="assets/img/cat-cumples.jpg" class="card-img-top w-100" alt="Cumples Infantiles" style="height: 500px; object-fit: contain;">
+                        <img src="assets/img/cat-cumples.jpg" class="card-img-top w-100" alt="Cumples Infantiles" style="height: 400px; object-fit: cover;">
                         <div class="card-body d-flex align-items-center justify-content-center p-3">
                             <a href="cumples.html" class="btn btn-outline-light rounded-pill px-4 fw-bold text-uppercase">Ver Catálogo Completo</a>
                         </div>
@@ -169,52 +143,50 @@
             </div>
         </div>
     </section> 
-    
-   
+
     <!-- Footer -->
     <footer id="contacto" style="background-color: #222; color: #fff; padding: 40px 20px; font-family: sans-serif;">
-  <div style="max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px;">
-    
-    <!-- Columna 1: Info del Taller -->
-    <div style="flex: 1; min-width: 250px;">
-      <h3 style="color: #fff; margin-bottom: 10px;">Dora Batí</h3>
-      <p style="color: #ccc; font-size: 0.9em; line-height: 1.5; margin-bottom: 12px;">
-        Pastelería artesanal y menús a medida.<br>
-        Recoleta, CABA (Retiros y envíos).
-      </p>
-      
-    </div>
+        <div style="max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px;">
+            
+            <!-- Columna 1: Info del Taller -->
+            <div style="flex: 1; min-width: 250px;">
+                <h3 style="color: #fff; margin-bottom: 10px;">Dora Batí</h3>
+                <p style="color: #ccc; font-size: 0.9em; line-height: 1.5; margin-bottom: 12px;">
+                    Pastelería artesanal y menús a medida.<br>
+                    📍 Recoleta, CABA (Retiros y envíos).
+                </p>
+            </div>
 
-    <!-- Columna 2: Contacto Directo -->
-    <div style="flex: 1; min-width: 250px;">
-      <h4 style="color: #fff; margin-bottom: 10px;">Contacto Directo</h4>
-      <p style="margin-bottom: 8px;">
-        <a href="https://wa.me/5491123843612?text=Hola%20Dora%20Bat%C3%AD,%20quisiera%20hacer%20una%20consulta" target="_blank" style="color: #25D366; text-decoration: none; font-weight: bold;">
-          💬 Hacé tu pedido por WhatsApp
-        </a>
-      </p>
-      <p>
-        <a href="https://instagram.com/dorabati.pasteleria" target="_blank" style="color: #E1306C; text-decoration: none; font-weight: bold;">
-          📸 Seguinos en Instagram (@dorabati.pasteleria)
-        </a>
-      </p>
-    </div>
+            <!-- Columna 2: Contacto Directo -->
+            <div style="flex: 1; min-width: 250px;">
+                <h4 style="color: #fff; margin-bottom: 10px;">Contacto Directo</h4>
+                <p style="margin-bottom: 8px;">
+                    <a href="https://wa.me/5491123843612?text=Hola%20Dora%20Bat%C3%AD,%20quisiera%20hacer%20una%20consulta" target="_blank" style="color: #25D366; text-decoration: none; font-weight: bold;">
+                        💬 Hacé tu pedido por WhatsApp
+                    </a>
+                </p>
+                <p>
+                    <a href="https://instagram.com/dorabati.pasteleria" target="_blank" style="color: #E1306C; text-decoration: none; font-weight: bold;">
+                        📸 Seguinos en Instagram (@dorabati.pasteleria)
+                    </a>
+                </p>
+            </div>
 
-    <!-- Columna 3: Modalidad -->
-    <div style="flex: 1; min-width: 250px;">
-      <h4 style="color: #fff; margin-bottom: 10px;">Modalidad</h4>
-      <p style="color: #ccc; font-size: 0.9em; line-height: 1.5;">
-        Elaboramos todo fresco y bajo pedido.<br>
-        Encargá tu menú o torta con anticipación.
-      </p>
-    </div>
+            <!-- Columna 3: Modalidad -->
+            <div style="flex: 1; min-width: 250px;">
+                <h4 style="color: #fff; margin-bottom: 10px;">Modalidad</h4>
+                <p style="color: #ccc; font-size: 0.9em; line-height: 1.5;">
+                    Elaboramos todo fresco y bajo pedido.<br>
+                    Encargá tu menú o torta con anticipación.
+                </p>
+            </div>
 
-  </div>
+        </div>
 
-  <div style="text-align: center; margin-top: 30px; border-top: 1px solid #444; padding-top: 15px; font-size: 0.8em; color: #888;">
-    © 2026 Dora Batí. Todos los derechos reservados.
-  </div>
-</footer>
+        <div style="text-align: center; margin-top: 30px; border-top: 1px solid #444; padding-top: 15px; font-size: 0.8em; color: #888;">
+            © 2026 Dora Batí. Todos los derechos reservados.
+        </div>
+    </footer>
 
     <!-- Scripts de Bootstrap y JavaScript integrados -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
