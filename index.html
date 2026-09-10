@@ -4,100 +4,179 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Pastelería Artesanal en Recoleta | Menús a Medida & Keto</title>
-    <!-- Favicon-->
+    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-    <!-- Font Awesome icons -->
-    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-    <!-- Google fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet" />
+    <!-- Framework CSS Integrado -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" />
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <!-- Tipografías -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet" />
+    
+    <style>
+        body {
+            font-family: 'Roboto Slab', serif;
+            color: #212529;
+            background-color: #f8f9fa;
+        }
+        h1, h2, h3, h4, .navbar-brand {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+        .navbar {
+            background-color: #1a1a1a !important;
+            padding: 1rem 0;
+        }
+        .masthead {
+            background-image: url('assets/img/header.png');
+            background-size: cover;
+            background-position: center right;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        .masthead::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(90deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.1) 100%);
+        }
+        .masthead .container {
+            position: relative;
+            z-index: 2;
+        }
+        .kicker {
+            color: #ffc107;
+            font-weight: 700;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        .portfolio-item {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            background: #fff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .portfolio-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+        }
+        .portfolio-caption {
+            padding: 1.5rem;
+            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .btn-warning-custom {
+            background-color: #ffc107;
+            color: #000;
+            font-weight: 700;
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+        }
+        .btn-warning-custom:hover {
+            background-color: #e0a800;
+            color: #000;
+        }
+        .modal-content {
+            border-radius: 15px;
+            border: none;
+        }
+    </style>
 </head>
 <body id="page-top">
-    <!-- Navigation-->
+
+    <!-- Navegación -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand" href="#page-top">Pastelería Recoleta</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                Menú <i class="fas fa-bars ms-1"></i>
+            <a class="navbar-brand text-warning" href="#page-top">Pastelería Recoleta</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
+                <i class="fas fa-bars"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-dark navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="#portfolio">Minicatálogos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">Sobre Nosotros</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+                <ul class="navbar-nav text-uppercase ms-auto py-2">
+                    <li class="nav-item"><a class="nav-link text-white ms-3" href="#portfolio">Minicatálogos</a></li>
+                    <li class="nav-item"><a class="nav-link text-white ms-3" href="#contacto">Contacto</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- Header / Hero Section -->
-    <header class="masthead" style="background-image: url('assets/img/header.png'); background-size: cover; background-position: center; min-height: 100vh; display: flex; align-items: center;">
-        <div class="container">
+    <header class="masthead">
+        <div class="container mt-5 py-5">
             <div class="row">
-                <div class="col-lg-6 text-start">
-                    <div class="masthead-subheading text-warning">PASTELERÍA ARTESANAL EN RECOLETA</div>
-                    <div class="masthead-heading text-uppercase text-white">Pastelería Artesanal & Menús a Medida</div>
-                    <p class="fs-5 text-white mb-4">
+                <div class="col-lg-7 text-start">
+                    <div class="kicker text-uppercase">PASTELERÍA ARTESANAL EN RECOLETA</div>
+                    <h1 class="text-uppercase text-white display-4 mb-3">Pastelería Artesanal & Menús a Medida</h1>
+                    <p class="fs-5 text-light mb-4">
                         Tortas de festejo tradicionales, especialidades sin azúcar agregada y viandas nutritivas para tu día a día. Elaborado a pedido con ingredientes reales.
                     </p>
-                    <a class="btn btn-primary btn-xl text-uppercase" href="#portfolio">Ver Minicatálogos</a>
+                    <a class="btn btn-warning-custom text-uppercase shadow" href="#portfolio">Ver Minicatálogos</a>
                 </div>
             </div>
         </div>
     </header>
 
     <!-- Minicatálogos Section -->
-    <section class="page-section bg-light" id="portfolio">
-        <div class="container">
-            <div class="text-center">
-                <h2 class="section-heading text-uppercase">Nuestros Minicatálogos</h2>
-                <h3 class="section-subheading text-muted">Elegí la opción que estás buscando para ver los productos detallados.</h3>
+    <section class="py-5" id="portfolio">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h2 class="text-uppercase fw-bold">Nuestros Minicatálogos</h2>
+                <p class="text-muted fs-5">Elegí la opción que estás buscando para ver los productos detallados.</p>
             </div>
-            <div class="row">
+            <div class="row g-4">
                 <!-- Tarjeta 1: Tortas Tradicionales -->
-                <div class="col-lg-4 col-sm-6 mb-4">
+                <div class="col-lg-4 col-md-6">
                     <div class="portfolio-item">
-                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
-                            <div class="portfolio-hover">
-                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/header.png" alt="Tortas Tradicionales" />
-                        </a>
+                        <img class="img-fluid w-100" src="assets/img/header.png" alt="Tortas Tradicionales" style="height: 220px; object-fit: cover;" />
                         <div class="portfolio-caption">
-                            <div class="portfolio-caption-heading">Tortas Tradicionales</div>
-                            <div class="portfolio-caption-subheading text-muted">Para festejos y eventos</div>
+                            <div>
+                                <h4 class="fw-bold mb-2">Tortas Tradicionales</h4>
+                                <p class="text-muted small mb-3">Para festejos y eventos especiales</p>
+                            </div>
+                            <div>
+                                <button class="btn btn-outline-dark btn-sm text-uppercase fw-bold rounded-pill px-3" data-bs-toggle="modal" data-bs-target="#modal1">Ver Opciones</button>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <!-- Tarjeta 2: Especialidades Sin Azúcar / Keto -->
-                <div class="col-lg-4 col-sm-6 mb-4">
+                <div class="col-lg-4 col-md-6">
                     <div class="portfolio-item">
-                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
-                            <div class="portfolio-hover">
-                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/header.png" alt="Línea Sin Azúcar & Keto" />
-                        </a>
+                        <img class="img-fluid w-100" src="assets/img/header.png" alt="Línea Sin Azúcar & Keto" style="height: 220px; object-fit: cover;" />
                         <div class="portfolio-caption">
-                            <div class="portfolio-caption-heading">Línea Sin Azúcar & Keto</div>
-                            <div class="portfolio-caption-subheading text-muted">Bajo en carbohidratos & 100% artesanal</div>
+                            <div>
+                                <h4 class="fw-bold mb-2">Línea Sin Azúcar & Keto</h4>
+                                <p class="text-muted small mb-3">Bajo en carbohidratos & 100% artesanal</p>
+                            </div>
+                            <div>
+                                <button class="btn btn-outline-dark btn-sm text-uppercase fw-bold rounded-pill px-3" data-bs-toggle="modal" data-bs-target="#modal2">Ver Opciones</button>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <!-- Tarjeta 3: Viandas Nutritivas -->
-                <div class="col-lg-4 col-sm-6 mb-4">
+                <div class="col-lg-4 col-md-6">
                     <div class="portfolio-item">
-                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
-                            <div class="portfolio-hover">
-                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/header.png" alt="Viandas Nutritivas" />
-                        </a>
+                        <img class="img-fluid w-100" src="assets/img/header.png" alt="Viandas Nutritivas" style="height: 220px; object-fit: cover;" />
                         <div class="portfolio-caption">
-                            <div class="portfolio-caption-heading">Viandas Nutritivas</div>
-                            <div class="portfolio-caption-subheading text-muted">Para tu menú del día a día</div>
+                            <div>
+                                <h4 class="fw-bold mb-2">Viandas Nutritivas</h4>
+                                <p class="text-muted small mb-3">Para solucionar tu menú semanal</p>
+                            </div>
+                            <div>
+                                <button class="btn btn-outline-dark btn-sm text-uppercase fw-bold rounded-pill px-3" data-bs-toggle="modal" data-bs-target="#modal3">Ver Opciones</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -105,91 +184,51 @@
         </div>
     </section>
 
-    <!-- Modales de Productos (Ventanas Emergentes) -->
-    <!-- Modal 1 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-bs-dismiss="modal"><i class="fas fa-times fa-2x"></i></div>
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-8">
-                            <div class="modal-body text-center">
-                                <h2 class="text-uppercase">Tortas Tradicionales</h2>
-                                <p class="item-intro text-muted">Elaboradas a pedido con ingredientes frescos y de primera calidad.</p>
-                                <p>Consultá la lista completa de tortas de festejo, rellenos y tamaños disponibles.</p>
-                                <a class="btn btn-success btn-xl text-uppercase my-3" href="https://wa.me/5491112345678?text=Hola!%20Quiero%20consultar%20por%20las%20Tortas%20Tradicionales" target="_blank">
-                                    <i class="fab fa-whatsapp me-1"></i> Consultar por WhatsApp
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <!-- Ventanas Flotantes (Modales) -->
+    <div class="modal fade" id="modal1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center p-4">
+                <h3 class="fw-bold text-uppercase mb-2">Tortas Tradicionales</h3>
+                <p class="text-muted mb-4">Elaboradas a pedido con ingredientes frescos y de primera calidad.</p>
+                <a class="btn btn-success btn-lg fw-bold rounded-pill" href="https://wa.me/5491112345678?text=Hola!%20Quiero%20consultar%20por%20las%20Tortas%20Tradicionales" target="_blank">
+                    <i class="fab fa-whatsapp me-2"></i> Pedir por WhatsApp
+                </a>
             </div>
         </div>
     </div>
 
-    <!-- Modal 2 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-bs-dismiss="modal"><i class="fas fa-times fa-2x"></i></div>
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-8">
-                            <div class="modal-body text-center">
-                                <h2 class="text-uppercase">Especialidades Sin Azúcar / Keto</h2>
-                                <p class="item-intro text-muted">Elaboradas con harina de almendras/coco y endulzadas con eritritol.</p>
-                                <p>Scones, budines y repostería baja en carbohidratos ideal para tu alimentación saludable.</p>
-                                <a class="btn btn-success btn-xl text-uppercase my-3" href="https://wa.me/5491112345678?text=Hola!%20Quiero%20pedir%20el%20minicatálogo%20Keto%20/%20Sin%20Azúcar" target="_blank">
-                                    <i class="fab fa-whatsapp me-1"></i> Consultar por WhatsApp
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <div class="modal fade" id="modal2" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center p-4">
+                <h3 class="fw-bold text-uppercase mb-2">Línea Sin Azúcar & Keto</h3>
+                <p class="text-muted mb-4">Elaborados con harina de almendras/coco y eritritol. Repostería baja en carbohidratos.</p>
+                <a class="btn btn-success btn-lg fw-bold rounded-pill" href="https://wa.me/5491112345678?text=Hola!%20Quiero%20pedir%20el%20minicatálogo%20Keto" target="_blank">
+                    <i class="fab fa-whatsapp me-2"></i> Pedir por WhatsApp
+                </a>
             </div>
         </div>
     </div>
 
-    <!-- Modal 3 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-bs-dismiss="modal"><i class="fas fa-times fa-2x"></i></div>
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-8">
-                            <div class="modal-body text-center">
-                                <h2 class="text-uppercase">Viandas Nutritivas</h2>
-                                <p class="item-intro text-muted">Platos preparados listos para solucionar tu semana.</p>
-                                <a class="btn btn-success btn-xl text-uppercase my-3" href="https://wa.me/5491112345678?text=Hola!%20Quiero%20información%20sobre%20las%20Viandas%20Nutritivas" target="_blank">
-                                    <i class="fab fa-whatsapp me-1"></i> Consultar por WhatsApp
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <div class="modal fade" id="modal3" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center p-4">
+                <h3 class="fw-bold text-uppercase mb-2">Viandas Nutritivas</h3>
+                <p class="text-muted mb-4">Platos caseros preparados para tu semana.</p>
+                <a class="btn btn-success btn-lg fw-bold rounded-pill" href="https://wa.me/5491112345678?text=Hola!%20Quiero%20información%20sobre%20las%20Viandas" target="_blank">
+                    <i class="fab fa-whatsapp me-2"></i> Pedir por WhatsApp
+                </a>
             </div>
         </div>
     </div>
 
-    <!-- Footer-->
-    <footer class="footer py-4">
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4" id="contacto">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-4 text-lg-start">Pastelería Artesanal Recoleta © 2026</div>
-                <div class="col-lg-4 my-3 my-lg-0">
-                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                </div>
-            </div>
+            <p class="mb-0">Pastelería Artesanal Recoleta © 2026</p>
         </div>
     </footer>
 
-    <!-- Bootstrap core JS (vía CDN seguro)-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
-    <script src="js/scripts.js"></script>
+    <!-- Scripts de Bootstrap y JavaScript integrados -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
