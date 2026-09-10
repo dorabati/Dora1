@@ -65,16 +65,30 @@
         <div class="container">
             <div class="row g-4">
 
-                <!-- Torta Personalizada -->
+                <!-- Torta Personalizada simple-->
                 <div class="col-md-6 col-lg-4">
                     <div class="card card-product shadow-sm h-100">
                         <div class="card-img-container">
-                            <img src="assets/img/torta personalizada.JPG" class="card-img-top" alt="Torta Personalizada">
+                            <img src="assets/img/simple.jpeg" class="card-img-top" alt="Torta Personalizada Simple">
                         </div>
                         <div class="card-body p-4 text-center d-flex flex-column">
-                            <h5 class="fw-bold">Torta Personalizada</h5>
+                            <h5 class="fw-bold">Torta Personalizada Simple</h5>
                             <p class="text-muted small mb-2">Bizcochuelo a elección, rellenos artesanales y cobertura a gusto.</p>
-                            <p class="price-tag mb-3">Desde $45.000</p>
+                            <p class="price-tag mb-3">Desde $45.000 (8-10 porciones)</p>
+                            <button class="btn btn-outline-dark rounded-pill mt-auto" data-bs-toggle="modal" data-bs-target="#modalPersonalizada">Ver opciones de armado</button>
+                        </div>
+                    </div>
+                </div>
+              <!-- Torta Personalizada Doble-->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card card-product shadow-sm h-100">
+                        <div class="card-img-container">
+                            <img src="assets/img/doble.jpg" class="card-img-top" alt="Torta Personalizada Doble">
+                        </div>
+                        <div class="card-body p-4 text-center d-flex flex-column">
+                            <h5 class="fw-bold">Torta Personalizada Doble</h5>
+                            <p class="text-muted small mb-2">Bizcochuelo a elección, rellenos artesanales y cobertura a gusto.</p>
+                            <p class="price-tag mb-3">Desde $80.000 (8-10 porciones)</p>
                             <button class="btn btn-outline-dark rounded-pill mt-auto" data-bs-toggle="modal" data-bs-target="#modalPersonalizada">Ver opciones de armado</button>
                         </div>
                     </div>
@@ -84,12 +98,12 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="card card-product shadow-sm h-100">
                         <div class="card-img-container">
-                            <img src="assets/img/Diapositiva3.JPG" class="card-img-top" alt="Torta Matilda Clásica">
+                            <img src="assets/img/matilda.jpeg" class="card-img-top" alt="Torta Matilda Clásica">
                         </div>
                         <div class="card-body p-4 text-center d-flex flex-column">
                             <h5 class="fw-bold">Torta Matilda Clásica</h5>
-                            <p class="text-muted small mb-2">Húmeda de chocolate con ganache intenso. (2-4 personas)</p>
-                            <p class="price-tag mt-auto mb-0">$35.000</p>
+                            <p class="text-muted small mb-2">Húmeda de chocolate con ganache intenso. </p>
+                            <p class="price-tag mt-auto mb-0">$35.000 (2-4 porciones)</p>
                         </div>
                     </div>
                 </div>
@@ -98,31 +112,91 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="card card-product shadow-sm h-100">
                         <div class="card-img-container">
-                            <img src="assets/img/Diapositiva3.JPG" class="card-img-top" alt="Torta Matilda Cremosa">
+                            <img src="assets/img/cremosa.jpeg" class="card-img-top" alt="Torta Matilda Cremosa">
                         </div>
                         <div class="card-body p-4 text-center d-flex flex-column">
                             <h5 class="fw-bold">Torta Matilda Cremosa</h5>
-                            <p class="text-muted small mb-2">Mousse de chocolate intenso y cremoso. (8-10 personas)</p>
-                            <p class="price-tag mt-auto mb-0">$75.000</p>
+                            <p class="text-muted small mb-2">Mousse de chocolate intenso y cremoso.</p>
+                            <p class="price-tag mt-auto mb-0">$80.000 (8-10 porciones))</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Tortas Variadas (Brownie / Cheesecake / Selva Negra / Chocotorta / Sueño Coco) -->
+                <!-- Brownie -->
                 <div class="col-md-6 col-lg-4">
                     <div class="card card-product shadow-sm h-100">
                         <div class="card-img-container">
-                            <img src="assets/img/Diapositiva4.JPG" class="card-img-top" alt="Tortas Clasicas">
+                            <img src="assets/img/brownie.jpg" class="card-img-top" alt="Brownie">
                         </div>
                         <div class="card-body p-4 text-center d-flex flex-column">
-                            <h5 class="fw-bold">Tortas Clásicas & Tartas</h5>
-                            <p class="text-muted small mb-2">Brownies, Cheesecake, Selva Negra, Chocotorta y Sueño Coco.</p>
-                            <p class="price-tag mb-3">Desde $46.000</p>
-                            <button class="btn btn-outline-dark rounded-pill mt-auto" data-bs-toggle="modal" data-bs-target="#modalClasicas">Ver lista de precios</button>
+                            <h5 class="fw-bold">Brownie</h5>
+                            <p class="text-muted small mb-2">Increíblemente húmedos.</p>
+                            <p class="price-tag mb-3">Desde $60.000 la docena</p>
+                            <button class="btn btn-outline-dark rounded-pill mt-auto" data-bs-toggle="modal" data-bs-target="#modalClasicas">Con o sin nueces</button>
                         </div>
                     </div>
                 </div>
+             
+                <!-- Cheesecake -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card card-product shadow-sm h-100">
+                        <div class="card-img-container">
+                            <img src="assets/img/cheesecake.jpeg" class="card-img-top" alt="Cheesecake">
+                        </div>
+                        <div class="card-body p-4 text-center d-flex flex-column">
+                            <h5 class="fw-bold">Cheesecake</h5>
+                            <p class="text-muted small mb-2">Un cláasico de siempre</p>
+                            <p class="price-tag mb-3">$80.000 (8-10 porciones)</p>
+                                                    </div>
+                    </div>
+                </div>
 
+                <!-- Selva Negra -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card card-product shadow-sm h-100">
+                        <div class="card-img-container">
+                            <img src="assets/img/selva.JPG" class="card-img-top" alt="Selva Negra">
+                        </div>
+                        <div class="card-body p-4 text-center d-flex flex-column">
+                            <h5 class="fw-bold">Selva Negra</h5>
+                            <p class="text-muted small mb-2">Una explosión de sabores.</p>
+                            <p class="price-tag mb-3">$80.000 (8-10 porciones)</p>
+                                                    </div>
+                    </div>
+                </div>
+
+
+                <!-- Sueño Coco) -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card card-product shadow-sm h-100">
+                        <div class="card-img-container">
+                            <img src="assets/img/sueno.jpeg" class="card-img-top" alt="Sueño de Coco">
+                        </div>
+                        <div class="card-body p-4 text-center d-flex flex-column">
+                            <h5 class="fw-bold">Sueño de Coco</h5>
+                            <p class="text-muted small mb-2">Una delicia de chocolate y coco.</p>
+                            <p class="price-tag mb-3">$80.000 (8-10 porciones</p>
+                                                    </div>
+                    </div>
+                </div>
+
+
+
+                <!-- Chocotorta) -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card card-product shadow-sm h-100">
+                        <div class="card-img-container">
+                            <img src="assets/img/chocotorta.jpeg" class="card-img-top" alt="Chocotorta">
+                        </div>
+                        <div class="card-body p-4 text-center d-flex flex-column">
+                            <h5 class="fw-bold">Sueño de Coco</h5>
+                            <p class="text-muted small mb-2">Nunca falla.</p>
+                            <p class="price-tag mb-3">$80.000 (8-10 porciones</p>
+                                                    </div>
+                    </div>
+                </div>
+
+                
                 <!-- Budines -->
                 <div class="col-md-6 col-lg-4">
                     <div class="card card-product shadow-sm h-100">
