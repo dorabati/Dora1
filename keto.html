@@ -1,1 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Menú Keto, Light & Saludable | Dora Batí</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+        body { font-family: 'Roboto Slab', serif; background-color: #f8f9fa; color: #212529; }
+        h1, h2, h3, h4, h5 { font-family: 'Montserrat', sans-serif; font-weight: 700; }
+        .navbar { background-color: #1a1a1a !important; padding: 1rem 0; }
+        .header-catalog { background-color: #4a2c35; color: #fff; padding: 50px 0 30px; }
+        
+        /* Tarjetas de producto */
+        .card-product { border: none; border-radius: 16px; overflow: hidden; transition: transform 0.2s, box-shadow 0.2s; background: #fff; }
+        .card-product:hover { transform: translateY(-4px); box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important; }
+        .card-img-container { height: 240px; overflow: hidden; position: relative; }
+        .card-img-top { width: 100%; height: 100%; object-fit: cover; }
+        .price-tag { font-size: 1.25rem; color: #4a2c35; font-weight: 700; }
+        .badge-keto { background-color: #2e7d32; color: #fff; font-size: 0.8rem; }
+        .badge-kcal { background-color: #e53935; color: #fff; font-size: 0.8rem; }
 
+        /* Botón de WhatsApp Flotante Fijo */
+        .btn-whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background-color: #25D366;
+            color: #fff;
+            border-radius: 50px;
+            padding: 12px 24px;
+            font-weight: bold;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            transition: transform 0.2s;
+        }
+        .btn-whatsapp-float:hover { background-color: #1eb954; color: #fff; transform: scale(1.05); }
+    </style>
+</head>
+<body>
+
+    <!-- Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand text-warning" href="index.html"><i class="fas fa-arrow-left me-2"></i>Volver al Inicio</a>
+            <span class="navbar-text text-white fw-bold">Pastelería Dora Batí</span>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="header-catalog text-center">
+        <div class="container">
+            <h1 class="text-uppercase text-warning mb-2">Menú Keto, Light & Saludable</h1>
+            <p class="fs-5 text-light mb-1">Sin azúcar agregada · Harina de almendras · Apto para diabéticos</p>
+            <small class="text-light-50">Disfrutá lo dulce y salado, cuidando de vos.</small>
+        </div>
+    </header>
+
+    <!-- Catálogo de Productos -->
+    <section class="py-5">
+        <div class="container">
+
+            <!-- SECCIÓN 1: PANADERÍA Y SALADOS -->
+            <h3 class="border-bottom pb-2 mb-4 text-dark"><i class="fas fa-bread-slice me-2 text-warning"></i>Panadería & Salados Keto</h3>
+            <div class="row g-4 mb-5">
+
+                <!-- Pan de Almendras -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card card-product shadow-sm h-100">
+                        <div class="card-img-container">
+                            <img src="assets/img/keto/pan-almendras.jpg" class="card-img-top" alt="Pan de Harina de Almendras">
+                        </div>
+                        <div class="card-body p-4 text-center d-flex flex-column">
+                            <span class="badge badge-keto mb-2 align-self-center">100% Harina de Almendras</span>
+                            <h5 class="fw-bold">Pan de Harina de Almendras</h5>
+                            <p class="text-muted small mb-2">Especial para tostadas y sándwiches. Peso aprox. 1000g.</p>
+                            <p class="price-tag mt-auto mb-0">$27.000</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tartas Saladas -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card card-product shadow-sm h-100">
+                        <div class="card-img-container">
+                            <img src="assets/img/keto/tartas-saladas.jpg" class="card-img-top" alt="Tartas Saladas Keto">
+                        </div>
+                        <div class="card-body p-4 text-center d-flex flex-column">
+                            <span class="badge badge-keto mb-2 align-self-center">Base de Almendras</span>
+                            <h5 class="fw-bold">Tartas Saladas Keto</h5>
+                            <p class="text-muted small mb-2">Masa artesanal de harina de almendras con variados rellenos.</p>
+                            <p class="price-tag mb-3">Desde $16.000</p>
+                            <button class="btn btn-outline-dark rounded-pill mt-auto" data-bs-toggle="modal" data-bs-target="#modalTartasKeto">Ver sabores y precios</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Prepizzas -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card card-product shadow-sm h-100">
+                        <div class="card-img-container">
+                            <img src="assets/img/keto/prepizza.jpg" class="card-img-top" alt="Prepizzas Keto">
+                        </div>
+                        <div class="card-body p-4 text-center d-flex flex-column">
+                            <span class="badge badge-keto mb-2 align-self-center">Bajas en Carbos</span>
+                            <h5 class="fw-bold">Prepizzas Keto</h5>
+                            <p class="text-muted small mb-2">Elaboradas con harina de almendras, listas para hornear.</p>
+                            <p class="price-tag mb-3">Desde $14.000</p>
+                            <button class="btn btn-outline-dark rounded-pill mt-auto" data-bs-toggle="modal" data-bs-target="#modalPrepizzas">Ver opciones y promos</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- SECCIÓN 2: POSTRES EN POTE -->
+            <h3 class="border-bottom pb-2 mb-4 text-dark"><i class="fas fa-cookie-bite me-2 text-warning"></i>Postres Keto & Light (Potes 200g)</h3>
+            <div class="row g-4 mb-5">
+
+                <!-- Línea Clásica -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card card-product shadow-sm h-100">
+                        <div class="card-img-container">
+                            <img src="assets/img/keto/linea-clasica.jpg" class="card-img-top" alt="Línea Clásica Potes">
+                        </div>
+                        <div class="card-body p-4 text-center d-flex flex-column">
+                            <h5 class="fw-bold">Postres Línea Clásica</h5>
+                            <p class="text-muted small mb-2">Crumbles (Manzana, Pera) y Mousses (Limón, Moka-Choco).</p>
+                            <p class="price-tag mb-3">$7.000 / unidad</p>
+                            <button class="btn btn-outline-dark rounded-pill mt-auto" data-bs-toggle="modal" data-bs-target="#modalLineaClasica">Ver variedad y calorías</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Línea Selección -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card card-product shadow-sm h-100">
+                        <div class="card-img-container">
+                            <img src="assets/img/keto/linea-seleccion.jpg" class="card-img-top" alt="Línea Selección Potes">
+                        </div>
+                        <div class="card-body p-4 text-center d-flex flex-column">
+                            <h5 class="fw-bold">Postres Línea Selección</h5>
+                            <p class="text-muted small mb-2">Crumble de Frutilla & Cream y Cheesecake de Frutos Rojos.</p>
+                            <p class="price-tag mb-3">$10.000 / unidad</p>
+                            <button class="btn btn-outline-dark rounded-pill mt-auto" data-bs-toggle="modal" data-bs-target="#modalLineaSeleccion">Ver detalles y calorías</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Packs de Postres -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card card-product shadow-sm h-100">
+                        <div class="card-img-container">
+                            <img src="assets/img/keto/pack-postres.jpg" class="card-img-top" alt="Packs de Postres Keto">
+                        </div>
+                        <div class="card-body p-4 text-center d-flex flex-column">
+                            <span class="badge bg-warning text-dark mb-2 align-self-center">¡Descuento en Pack!</span>
+                            <h5 class="fw-bold">Packs de Postres</h5>
+                            <p class="text-muted small mb-2">Combiná tus sabores preferidos y ahorrá.</p>
+                            <p class="price-tag mb-3">Desde $25.000</p>
+                            <button class="btn btn-outline-dark rounded-pill mt-auto" data-bs-toggle="modal" data-bs-target="#modalPacksPostres">Ver opciones de Packs</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- SECCIÓN 3: BOCADITOS & VIANDAS -->
+            <h3 class="border-bottom pb-2 mb-4 text-dark"><i class="fas fa-utensils me-2 text-warning"></i>Bocaditos & Viandas</h3>
+            <div class="row g-4">
+
+                <!-- Pack Bocaditos -->
+                <div class="col-md-6 col-lg-6">
+                    <div class="card card-product shadow-sm h-100">
+                        <div class="card-img-container">
+                            <img src="assets/img/keto/pack-bocaditos.jpg" class="card-img-top" alt="Pack de Bocaditos Keto">
+                        </div>
+                        <div class="card-body p-4 text-center d-flex flex-column">
+                            <span class="badge badge-keto mb-2 align-self-center">Ideal para Freezar</span>
+                            <h5 class="fw-bold">Pack de Bocaditos (4 Envases)</h5>
+                            <p class="text-muted small mb-2">Mini torta 10x10 cm fraccionada en 4 porciones individuales.</p>
+                            <p class="price-tag mb-3">Desde $20.000 el pack</p>
+                            <button class="btn btn-outline-dark rounded-pill mt-auto" data-bs-toggle="modal" data-bs-target="#modalBocaditos">Ver variedades de tortas</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Viandas Individuales -->
+                <div class="col-md-6 col-lg-6">
+                    <div class="card card-product shadow-sm h-100">
+                        <div class="card-img-container">
+                            <img src="assets/img/keto/viandas.jpg" class="card-img-top" alt="Viandas Individuales Keto">
+                        </div>
+                        <div class="card-body p-4 text-center d-flex flex-column">
+                            <span class="badge bg-danger mb-2 align-self-center">10% OFF a partir de 10 unidades</span>
+                            <h5 class="fw-bold">Viandas Saladas Personalizadas</h5>
+                            <p class="text-muted small mb-2">Menú personalizado según tu plan nutricional en envases herméticos.</p>
+                            <p class="price-tag mb-3">Desde $9.600</p>
+                            <button class="btn btn-outline-dark rounded-pill mt-auto" data-bs-toggle="modal" data-bs-target="#modalViandas">Ver gramajes y precios</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+    <a href="https://wa.me/5491123843612?text=Hola%20Dora%20Bat%C3%AD,%20quisiera%20consultar%20por%20el%20Men%C3%BA%20Keto%20y%20Light" target="_blank" class="btn-whatsapp-float">
+        <i class="fab fa-whatsapp fs-4"></i>
+        <span>Hacer Pedido / Consultar</span>
+    </a>
+
+    <!-- MODALES / VENTANAS FLOTANTES -->
+
+    <!-- Modal Tartas Saladas -->
+    <div class="modal fade" id="modalTartasKeto" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-dark text-white">
+                    <h5 class="modal-title">Tartas Saladas (Harina de Almendras)</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-start">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Tarta Verdura <span class="fw-bold">$37.000</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Tarta Pollo / Jamón & Queso <span class="fw-bold">$45.000</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Tarta Individual <span class="fw-bold">$16.000</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Prepizzas -->
+    <div class="modal fade" id="modalPrepizzas" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-dark text-white">
+                    <h5 class="modal-title">Prepizzas Keto</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-start">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Prepizza (Unidad) <span class="fw-bold">$14.000</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center bg-light">Prepizza Pack x 3 unidades <span class="fw-bold text-success">$36.000</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Línea Clásica Postres -->
+    <div class="modal fade" id="modalLineaClasica" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-dark text-white">
+                    <h5 class="modal-title">Línea Clásica — $7.000 (Potes 200g)</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-start">
+                    <ul class="list-group list-group-flush mb-3">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Crumble de Manzana al Malbec <span class="badge badge-kcal">180 kcal</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Crumble de Pera & Canela <span class="badge badge-kcal">185 kcal</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Mousse Cítrica de Limón <span class="badge badge-kcal">100 kcal</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Mousse Moka-Choco <span class="badge badge-kcal">120 kcal</span></li>
+                    </ul>
+                    <div class="p-2 bg-light border rounded">
+                        <small class="text-muted"><i class="fas fa-leaf text-success me-1"></i><strong>Opción Ultra Light:</strong> Pedí cualquier crumble "SIN TOPPING" (base de fruta + crema) y restás 70 kcal al pote.</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Línea Selección Postres -->
+    <div class="modal fade" id="modalLineaSeleccion" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-dark text-white">
+                    <h5 class="modal-title">Línea Selección — $10.000 (Potes 200g)</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-start">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Crumble de Frutilla & Cream <span class="badge badge-kcal">165 kcal</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Cheesecake de Frutos Rojos <span class="badge badge-kcal">130 kcal</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Packs de Postres -->
+    <div class="modal fade" id="modalPacksPostres" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-dark text-white">
+                    <h5 class="modal-title">Packs Promocionales de Postres</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-start">
+                    <div class="mb-3 border-bottom pb-2">
+                        <h6 class="fw-bold mb-1">Pack Clásico (4 potes) <span class="float-end text-success">$25.000</span></h6>
+                        <small class="text-muted">4 potes a elección de la Línea Clásica.</small>
+                    </div>
+                    <div class="mb-3 border-bottom pb-2">
+                        <h6 class="fw-bold mb-1">Pack Combinado (4 potes) <span class="float-end text-success">$30.000</span></h6>
+                        <small class="text-muted">2 potes Línea Clásica + 2 potes Línea Selección.</small>
+                    </div>
+                    <div>
+                        <h6 class="fw-bold mb-1">Pack Semana Keto (6 potes) <span class="float-end text-success">$42.000</span></h6>
+                        <small class="text-muted">6 potes, uno de cada sabor del menú.</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Pack de Bocaditos -->
+    <div class="modal fade" id="modalBocaditos" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-dark text-white">
+                    <h5 class="modal-title">Pack de Bocaditos Keto (4 Envases)</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-start">
+                    <p class="small text-muted mb-2">Mini torta 10x10 cm cortada en 4 porciones de 5x5 cm. Cada porción viene en su propio envase hermético para consumir o freezar.</p>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Coco & DDL <span class="fw-bold">$20.000</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Cheesecake <span class="fw-bold">$25.000</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Chocotorta <span class="fw-bold">$25.000</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Selva Negra <span class="fw-bold">$27.000</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Sueño Coco <span class="fw-bold">$31.000</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Matilda <span class="fw-bold">$40.000</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Viandas Saladas -->
+    <div class="modal fade" id="modalViandas" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-dark text-white">
+                    <h5 class="modal-title">Viandas Saladas Individuales</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-start">
+                    <p class="small text-muted mb-3">Menú personalizado en porciones herméticas.</p>
+                    <ul class="list-group list-group-flush mb-3">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Individual 200 g <span class="fw-bold">$9.600</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Individual 300 g <span class="fw-bold">$11.000</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Individual 400 g <span class="fw-bold">$13.600</span></li>
+                    </ul>
+                    <div class="p-2 bg-success text-white text-center rounded">
+                        <strong>★ Pedís 10 o más → 10% DE DESCUENTO ★</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <p class="mb-0">© 2026 Dora Batí. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Scripts Bootstrap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
